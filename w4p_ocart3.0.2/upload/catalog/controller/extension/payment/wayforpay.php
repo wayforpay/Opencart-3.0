@@ -154,7 +154,7 @@ class ControllerExtensionPaymentWayforpay extends Controller
             $this->response->redirect($this->url->link('checkout/success'));
         } else {
             $this->session->data['error'] = $paymentInfo;
-            $this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
+            $this->response->redirect($this->url->link('checkout/failure', '', 'SSL'));
         }
     }
 
