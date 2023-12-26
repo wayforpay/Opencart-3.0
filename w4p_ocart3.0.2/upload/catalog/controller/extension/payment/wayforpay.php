@@ -319,8 +319,8 @@ class WayForPay
 
         if (
             $response['transactionStatus'] == self::ORDER_APPROVED ||
-            $response['transactionStatus'] == self::ORDER_HOLD_APPROVED ||
-            $response['transactionStatus'] == self::ORDER_IS_PENDING		
+            $response['transactionStatus'] == self::ORDER_HOLD_APPROVED /* ||
+            $response['transactionStatus'] == self::ORDER_IS_PENDING	*/	
         ) {
             return true;
         }
