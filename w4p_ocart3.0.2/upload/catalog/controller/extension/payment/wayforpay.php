@@ -187,11 +187,8 @@ class ControllerExtensionPaymentWayforpay extends Controller
             } else {
                 $this->model_checkout_order->addOrderHistory($order_id, $this->config->get('payment_wayforpay_order_status_id'), $message, false);
             }
-
-            echo $w4p->getAnswerToGateWay($data);
-        } else {
-            echo $paymentInfo;
         }
+    	echo $w4p->getAnswerToGateWay($data);
         exit();
     }
 }
